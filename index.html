@@ -268,6 +268,25 @@
   .case-card h3{font-size:22px;margin-bottom:10px;}
   .case-card p{color:var(--text-dim);margin:0 0 6px;}
 
+  /* Анимированная "переписка" вместо живого доступа к боту — показывает работу,
+     но не отдаёт сам продукт бесплатно. Проигрывается один раз при появлении на экране. */
+  .chat-demo{display:flex;flex-direction:column;gap:10px;margin-top:18px;max-width:380px;}
+  .chat-bubble{
+    padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.4;
+    opacity:0;transform:translateY(10px);
+  }
+  .reveal.in .chat-bubble{animation:bubbleIn .5s ease forwards;}
+  .chat-bubble--user{align-self:flex-end;background:var(--accent1);color:#fff;border-bottom-right-radius:4px;}
+  .chat-bubble--bot{align-self:flex-start;background:var(--surface-2);color:var(--text);border-bottom-left-radius:4px;}
+  .chat-demo .chat-bubble:nth-child(1){animation-delay:.15s;}
+  .chat-demo .chat-bubble:nth-child(2){animation-delay:.75s;}
+  .chat-demo .chat-bubble:nth-child(3){animation-delay:1.55s;}
+  .chat-demo .chat-bubble:nth-child(4){animation-delay:2.15s;}
+  @keyframes bubbleIn{to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){
+    .chat-bubble{opacity:1;transform:none;animation:none!important;}
+  }
+
   /* ---------- trust ---------- */
   .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
   @media (max-width:700px){.trust-grid{grid-template-columns:1fr;}}
@@ -539,6 +558,12 @@
             <h3>ИИ-помощник, который отвечает клиентам сам</h3>
             <p>Задача: клиенты пишут в любое время суток, а ответить сразу не всегда получается — часть обращений теряется, пока бизнес занят.</p>
             <p>Решение: Telegram-бот на нейросети отвечает на вопросы мгновенно и круглосуточно, без выходных. Модель можно на ходу переключать под задачу (GPT, Claude, Grok, Gemini), а внутри бота — своё мини-приложение, оформленное под фирменный стиль бизнеса.</p>
+            <div class="chat-demo" aria-hidden="true">
+              <div class="chat-bubble chat-bubble--user">Работаете по выходным?</div>
+              <div class="chat-bubble chat-bubble--bot">Да, отвечаю круглосуточно, без выходных 🙂</div>
+              <div class="chat-bubble chat-bubble--user">А можно сменить модель ИИ?</div>
+              <div class="chat-bubble chat-bubble--bot">Конечно — команда /model, и выбираете GPT, Claude, Grok или Gemini.</div>
+            </div>
           </div>
           <a href="#contact" class="btn btn-ghost" style="white-space:nowrap;">Обсудить похожий проект</a>
         </div>
