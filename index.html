@@ -15,9 +15,11 @@
     --surface:#15151C;
     --surface-2:#1C1C26;
     --text:#F2F2F7;
-    --text-dim:#9494A8;
+    --text-dim:#C8C8D8;
     --accent1:#6C5CE7;
     --accent2:#00D9FF;
+    --accent2-text:#7CEBFF;   /* бирюзовый для ТЕКСТА (контраст ≥7:1) */
+    --success-text:#3ddc97;
     --accent3:#FF3EA5;
     --accent4:#FFB020;
     --border:rgba(255,255,255,0.08);
@@ -38,9 +40,9 @@
     --surface:#FFFFFF;
     --surface-2:#F1F1F5;
     --text:#14141A;
-    --text-dim:#6B6B7A;
+    --text-dim:#3A3A48;
     --accent1:#5B3DF5;
-    --accent2:#0EA5C4;
+    --accent2:#0EA5C4; --accent2-text:#00596D; --success-text:#075E3A; --danger:#A3200F;
     --accent3:#E11D8F;
     --accent4:#E08A00;
     --border:rgba(20,20,26,0.08);
@@ -54,9 +56,9 @@
       --surface:#FFFFFF;
       --surface-2:#F1F1F5;
       --text:#14141A;
-      --text-dim:#6B6B7A;
+      --text-dim:#3A3A48;
       --accent1:#5B3DF5;
-      --accent2:#0EA5C4;
+      --accent2:#0EA5C4; --accent2-text:#00596D; --success-text:#075E3A; --danger:#A3200F;
       --accent3:#E11D8F;
       --accent4:#E08A00;
       --border:rgba(20,20,26,0.08);
@@ -102,7 +104,8 @@
     font-size:13px;
     letter-spacing:.06em;
     text-transform:uppercase;
-    color:var(--accent2);
+    color:var(--accent2-text);
+    font-weight:600;
     display:flex;align-items:center;gap:8px;
     margin-bottom:14px;
   }
@@ -182,7 +185,7 @@
   .btn-primary{background:linear-gradient(135deg,var(--accent1),var(--accent3) 55%,var(--accent2));color:#fff;box-shadow:0 8px 24px rgba(255,62,165,.32);}
   .btn-primary:hover{box-shadow:0 14px 38px rgba(255,62,165,.5);filter:brightness(1.1) saturate(1.1);}
   .btn-ghost{background:var(--surface);border-color:var(--border-strong);color:var(--text);}
-  .btn-ghost:hover{border-color:var(--accent2);background:var(--surface-2);color:var(--accent2);}
+  .btn-ghost:hover{border-color:var(--accent2);background:var(--surface-2);color:var(--accent2-text);}
   .btn-block{width:100%;}
 
   /* ---------- hero ---------- */
@@ -238,7 +241,7 @@
   .card:nth-child(3) .card-icon{background:linear-gradient(135deg,var(--accent2),var(--accent1));}
   .card h3{font-size:19px;margin-bottom:10px;}
   .card p{color:var(--text-dim);font-size:15px;margin:0;}
-  .card .tag{display:inline-block;margin-top:16px;font-family:var(--font-mono);font-size:12px;color:var(--accent2);border:1px solid var(--border-strong);padding:4px 10px;border-radius:20px;}
+  .card .tag{display:inline-block;margin-top:16px;font-family:var(--font-mono);font-size:13px;color:var(--accent2-text);border:1px solid var(--border-strong);padding:4px 10px;border-radius:20px;}
 
   /* reveal */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);}
@@ -248,10 +251,10 @@
   .steps{display:grid;gap:0;counter-reset:step;}
   .step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--border);}
   .step:last-child{border-bottom:none;}
-  .step-num{font-family:var(--font-mono);font-size:14px;color:var(--accent2);border:1px solid var(--border-strong);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+  .step-num{font-family:var(--font-mono);font-size:14px;color:var(--accent2-text);border:1px solid var(--border-strong);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
   .step h4{font-family:var(--font-head);font-size:17px;margin:0 0 6px;}
   .step p{margin:0;color:var(--text-dim);font-size:15px;}
-  .step-meta{font-family:var(--font-mono);font-size:12px;color:var(--text-dim);margin-top:8px;display:inline-block;}
+  .step-meta{font-family:var(--font-mono);font-size:13px;color:var(--text-dim);margin-top:8px;display:inline-block;}
 
   /* ---------- case in progress ---------- */
   .case-card{
@@ -260,7 +263,7 @@
     display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
   }
   @media (max-width:700px){.case-card{grid-template-columns:1fr;}}
-  .case-status{font-family:var(--font-mono);font-size:12px;color:var(--success);border:1px solid rgba(61,220,151,.35);background:rgba(61,220,151,.08);padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;}
+  .case-status{font-family:var(--font-mono);font-size:13px;color:var(--success-text);border:1px solid rgba(61,220,151,.5);background:rgba(61,220,151,.08);padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;}
   .case-card h3{font-size:22px;margin-bottom:10px;}
   .case-card p{color:var(--text-dim);margin:0 0 6px;}
 
@@ -280,20 +283,20 @@
   .price-card:hover{transform:translateY(-6px);border-color:var(--border-strong);box-shadow:var(--shadow);}
   .price-card.featured{border-color:var(--accent1);box-shadow:0 0 0 1px var(--accent1), var(--shadow);position:relative;}
   .price-card.featured:hover{box-shadow:0 0 0 1px var(--accent1), var(--shadow);}
-  .price-card.featured::before{content:"популярно";position:absolute;top:-12px;right:20px;font-family:var(--font-mono);font-size:11px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;padding:4px 10px;border-radius:20px;}
+  .price-card.featured::before{content:"популярно";position:absolute;top:-12px;right:20px;font-family:var(--font-mono);font-size:12.5px;font-weight:700;background:var(--accent1);color:#fff;padding:4px 10px;border-radius:20px;}
   .price-card h3{font-size:17px;color:var(--text-dim);font-weight:500;margin-bottom:4px;}
   .price-value{font-family:var(--font-head);font-size:30px;margin:6px 0 4px;}
   .price-value span{font-size:14px;color:var(--text-dim);font-weight:400;}
-  .price-time{font-family:var(--font-mono);font-size:12px;color:var(--accent2);margin-bottom:18px;}
+  .price-time{font-family:var(--font-mono);font-size:13px;color:var(--accent2-text);margin-bottom:18px;}
   .price-list{list-style:none;padding:0;margin:0 0 24px;flex:1;}
   .price-list li{padding:8px 0;border-top:1px solid var(--border);font-size:14.5px;color:var(--text-dim);}
   .price-list li:first-child{border-top:none;}
-  .price-note{margin-top:14px;font-size:12.5px;color:var(--text-dim);text-align:center;}
+  .price-note{margin-top:14px;font-size:13.5px;color:var(--text-dim);text-align:center;}
 
   /* ---------- faq ---------- */
   .faq-item{border-bottom:1px solid var(--border);}
   .faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text);font-family:var(--font-head);font-size:16.5px;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px;min-height:44px;}
-  .faq-q .plus{font-size:20px;color:var(--accent2);transition:transform .3s;flex:none;}
+  .faq-q .plus{font-size:20px;color:var(--accent2-text);transition:transform .3s;flex:none;}
   .faq-item.open .plus{transform:rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
   .faq-a p{margin:0 0 20px;color:var(--text-dim);font-size:15px;line-height:1.6;}
@@ -302,7 +305,7 @@
   .final{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:44px;}
   @media (max-width:700px){.final{padding:26px;}}
   .form-grid{display:grid;gap:18px;margin-top:28px;}
-  label{display:block;font-family:var(--font-mono);font-size:12.5px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;}
+  label{display:block;font-family:var(--font-mono);font-size:13.5px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;}
   input,textarea{
     width:100%;background:var(--surface-2);border:1px solid var(--border-strong);border-radius:10px;
     padding:13px 14px;color:var(--text);font-family:var(--font-body);font-size:16px;
@@ -310,10 +313,10 @@
   }
   input:focus,textarea:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 3px rgba(0,217,255,.15);}
   input.err,textarea.err{border-color:var(--danger);}
-  .field-err{font-size:12.5px;color:var(--danger);margin-top:6px;min-height:16px;}
+  .field-err{font-size:13.5px;color:var(--danger);margin-top:6px;min-height:16px;}
   .submit-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:6px;}
   .form-status{font-size:14px;font-family:var(--font-mono);}
-  .form-status.success{color:var(--success);}
+  .form-status.success{color:var(--success-text);}
 
   /* ---------- success animation ---------- */
   .success-panel{display:none;flex-direction:column;align-items:center;text-align:center;padding:40px 20px;}
@@ -339,7 +342,7 @@
     .success-check circle,.success-check path,.success-panel h3,.success-panel p,.success-panel .btn{animation:none!important;stroke-dashoffset:0!important;opacity:1!important;transform:none!important;}
   }
   .alt-contact{margin-top:24px;padding-top:24px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14.5px;color:var(--text-dim);}
-  .alt-contact a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  .alt-contact a{color:var(--accent2-text);text-decoration:none;font-weight:600;}
 
   /* ---------- floating CTA ---------- */
   .floating-cta{
@@ -362,7 +365,7 @@
     transition:opacity .3s ease, transform .3s cubic-bezier(.2,.8,.2,1), border-color .2s, color .2s;
   }
   .to-top.show{opacity:1;transform:translateY(0);pointer-events:auto;}
-  .to-top:hover{border-color:var(--accent2);color:var(--accent2);}
+  .to-top:hover{border-color:var(--accent2);color:var(--accent2-text);}
 
   footer{border-top:1px solid var(--border);padding:36px 0;margin-top:40px;}
   .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;color:var(--text-dim);font-size:13.5px;}
@@ -517,14 +520,14 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow" style="justify-content:center;">Кейс</div>
-        <h2>Сейчас в работе</h2>
+        <h2>Уже работает</h2>
       </div>
       <div class="case-card reveal">
         <div>
-          <span class="case-status">● в разработке</span>
+          <span class="case-status">✓ готово и работает</span>
           <h3>Telegram-бот для студий красоты</h3>
           <p>Задача: небольшие студии и частные мастера теряют клиентов из-за ручной записи в блокноте — без системы напоминаний и без записи вне рабочего времени.</p>
-          <p>Решение: Telegram-бот, который сам ведёт запись, показывает свободное время мастеров и присылает напоминания клиентам, снижая неявки.</p>
+          <p>Решение: Telegram-бот сам ведёт запись, показывает свободное время мастеров и присылает клиентам напоминания о визите — это снижает неявки. Внутри бота — мини-приложение с каталогом услуг и ценами, которое открывается прямо в Telegram, без перехода на сторонний сайт.</p>
         </div>
         <a href="#contact" class="btn btn-ghost" style="white-space:nowrap;">Обсудить похожий проект</a>
       </div>
