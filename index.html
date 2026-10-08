@@ -1,18 +1,11 @@
 <!doctype html>
-<html lang="ru" data-theme="dark">
+<html lang="ru" data-theme="dark" translate="no" class="notranslate">
 <head>
 <meta charset="UTF-8">
-<script>
-  try {
-    var savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
-  } catch (e) {}
-</script>
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Марина Чайка — разработка сайтов, веб-приложений и ИИ-агентов</title>
-<meta name="description" content="Собираю сайты, веб-приложения и ИИ-агентов, которые снимают рутину с малого бизнеса. Лендинги от 30 000 ₽, сроки согласуем под вашу задачу.">
+<meta name="description" content="Собираю сайты, веб-приложения и ИИ-агентов, которые снимают рутину с малого бизнеса. Лендинги от 20 000 ₽, сроки согласуем под вашу задачу.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -411,7 +404,7 @@
     .reveal{opacity:1;transform:none;}
   }
 </style>
-<link rel="stylesheet" href="premium.css">
+<link rel="stylesheet" href="premium.css?v=20261008-cropped">
 </head>
 <body>
 
@@ -452,28 +445,83 @@
     <div id="heroBg" class="hero-bg" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <div class="eyebrow">Сайты и автоматизация для малого бизнеса</div>
+        <div class="eyebrow">Для мастеров и небольших студий</div>
         <h1 id="hero-title">
-          <span class="line"><span>Заявки — на сайте.</span></span>
-          <span class="line"><span>Запись — у бота.</span></span>
-          <span class="line"><span>Время — у вас.</span></span>
+          <span class="line"><span>Сайт и Telegram-бот</span></span>
+          <span class="line"><span>для бизнеса, где</span></span>
+          <span class="line"><span>клиенты записываются</span></span>
+          <span class="line"><span>на услуги.</span></span>
         </h1>
-        <p class="sub">Пока вы занимаетесь бизнесом, сайт принимает заявки, бот записывает клиентов, а ИИ отвечает на частые вопросы. Разработаю нужное вам решение и доведу до запуска.</p>
-        <div class="offer-facts"><span>Первые три сайта — <strong>скидка 20%</strong></span><span>Базовый запуск за <strong>7–10 рабочих дней</strong></span></div>
+        <p class="sub">Помогу показать услуги, упростить запись и сократить переписку с клиентами. Лично веду проект от первого разговора до запуска.</p>
+        <div class="hero-review-offer"><strong>Покажу, где клиенту сложно записаться, и предложу 3 улучшения.</strong><p>Пришлите сайт или соцсети — бесплатно разберу путь от знакомства с услугой до обращения.</p></div>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Получить план и стоимость <span aria-hidden="true">↗</span></a>
+          <a href="#review" class="btn btn-primary" id="freeReviewBtn">Получить разбор записи <span aria-hidden="true">↗</span></a>
           <a href="#case" class="btn btn-ghost">Как это работает <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="trust-line">Можно без ТЗ. Объём, цену и сроки согласуем до старта.</div>
+        <div class="trust-line">Бесплатно и без обязательств. Можно без сайта и без ТЗ.</div>
       </div>
-      <div class="hero-art" aria-label="Сайты, приложения и ИИ — от идеи до работающего продукта">
-        <div class="art-top"><b>Чайка / digital development</b><span>Дизайн + код</span></div>
-        <div class="orbit" aria-hidden="true"></div>
-        <svg class="art-mark" viewBox="0 0 240 240" fill="none" aria-hidden="true"><path d="M27 153C68 132 93 112 117 53C123 101 147 126 209 137C159 146 129 166 119 207C102 174 72 152 27 153Z" fill="currentColor"/><path d="M117 53C114 123 112 165 119 207M27 153C102 145 141 141 209 137" stroke="var(--surface)" stroke-width="1.2"/></svg>
-        <div class="art-chip chip-web"><span aria-hidden="true">◧</span>Сайты и лендинги</div>
-        <div class="art-chip chip-ai"><span aria-hidden="true">✳</span>ИИ-помощники</div>
-        <div class="art-chip chip-app"><span aria-hidden="true">⊞</span>Веб-приложения</div>
-        <div class="art-bottom"><span>От идеи до работающего продукта</span><span aria-hidden="true">↗</span></div>
+      <div class="review-example" aria-label="Что вы получите после бесплатного разбора записи">
+        <div class="review-example-top"><span>БЕСПЛАТНЫЙ РАЗБОР</span><span class="review-free">0 ₽</span></div>
+        <h2>Что вы получите<br>после разбора</h2>
+        <p class="review-example-intro">Посмотрю на запись глазами вашего клиента — от выбора услуги до обращения.</p>
+        <ol class="review-ideas">
+          <li><h3>Где клиенту сложно записаться</h3><p>Покажу, что мешает выбрать услугу и сделать следующий шаг.</p></li>
+          <li><h3>3 конкретных улучшения</h3><p>Предложу изменения, которые упростят путь к записи в вашем бизнесе.</p></li>
+          <li><h3>С чего начать и почему</h3><p>Объясню, какое улучшение стоит сделать первым и какую задачу оно решит.</p></li>
+        </ol>
+        <div class="review-example-bottom">Для вашей записи — свои 3 улучшения <span aria-hidden="true">↗</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="review" aria-labelledby="review-title">
+    <div class="wrap review-layout">
+      <div class="review-copy">
+        <div class="eyebrow">Ваш первый шаг</div>
+        <h2 id="review-title">Легко ли клиенту<br>записаться к вам?</h2>
+        <p>Ответьте на 3 коротких вопроса и добавьте сайт или соцсети, если они есть. Разберу путь от выбора услуги до обращения, предложу 3 улучшения и подскажу, с чего начать.</p>
+        <p>После разбора можно обсудить реализацию: объём работ, стоимость и сроки. Решение остаётся за вами.</p>
+        <div class="trust-line">Разбор бесплатный. Отвечаю лично.</div>
+      </div>
+      <form id="reviewForm" class="review-quiz" novalidate>
+        <div class="quiz-progress" id="quizProgress" role="status" aria-live="polite">Шаг 1 из 3 · Ваш бизнес</div>
+        <fieldset data-quiz-step="0">
+          <legend>Чем вы занимаетесь?</legend>
+          <label class="quiz-choice"><input type="radio" name="business" value="Частный мастер красоты">Частный мастер красоты</label>
+          <label class="quiz-choice"><input type="radio" name="business" value="Студия или салон красоты">Студия или салон красоты</label>
+          <label class="quiz-choice"><input type="radio" name="business" value="Массаж, фитнес и другие занятия">Массаж, фитнес и другие занятия</label>
+          <label class="quiz-choice"><input type="radio" name="business" value="Консультации и обучение">Консультации и обучение</label>
+          <label class="quiz-choice"><input type="radio" name="business" value="Другие услуги по записи">Другие услуги по записи</label>
+        </fieldset>
+        <fieldset data-quiz-step="1" hidden>
+          <legend>Что хотите улучшить в первую очередь?</legend>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Помочь клиентам выбрать услугу">Помочь клиентам выбрать услугу</label>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Упростить запись клиентов">Упростить запись клиентов</label>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Сократить переписку и настроить напоминания">Сократить переписку и настроить напоминания</label>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Понять, с чего начать">Понять, с чего начать</label>
+        </fieldset>
+        <fieldset data-quiz-step="2" hidden>
+          <legend>Добавьте немного деталей</legend>
+          <label for="reviewName">Как к вам обращаться</label>
+          <input id="reviewName" type="text" autocomplete="given-name" maxlength="100" placeholder="Ваше имя">
+          <label for="reviewDetails">Как клиенты сейчас записываются к вам?</label>
+          <textarea id="reviewDetails" rows="3" maxlength="2000" placeholder="Например: студия маникюра, клиенты записываются в переписке"></textarea>
+          <label for="reviewLink">Сайт или соцсети, если есть</label>
+          <input id="reviewLink" type="text" maxlength="500" placeholder="Ссылка — необязательно">
+          <p class="quiz-note">Контакт останется в Telegram, когда вы отправите запрос.</p>
+        </fieldset>
+        <p id="quizError" class="quiz-error" role="alert"></p>
+        <div class="quiz-actions"><button type="button" id="quizBack" class="btn btn-ghost" hidden>Назад</button><button type="submit" id="quizNext" class="btn btn-primary">Далее →</button></div>
+        <p class="quiz-note">Ответы останутся в браузере, пока вы сами не отправите запрос. <a href="privacy.html">Политика конфиденциальности</a></p>
+      </form>
+      <div id="reviewResult" class="review-quiz" hidden aria-labelledby="review-result-title">
+        <div class="eyebrow">Последний шаг</div>
+        <h3 id="review-result-title" tabindex="-1">Отправьте запрос на разбор записи</h3>
+        <p>Скопируйте сообщение и отправьте мне в Telegram. Я разберу, где клиенту сложно выбрать услугу или записаться, и предложу 3 улучшения. Запрос ещё не отправлен.</p>
+        <textarea id="reviewMessage" rows="9" readonly aria-label="Ваш запрос на бесплатный разбор"></textarea>
+        <div class="quiz-actions"><button type="button" id="reviewCopy" class="btn btn-ghost">1. Скопировать запрос</button><a class="btn btn-primary" href="https://t.me/chajjka" target="_blank" rel="noopener">2. Отправить в Telegram ↗</a></div>
+        <p id="reviewCopyStatus" class="quiz-note" role="status" aria-live="polite"></p>
+        <button type="button" id="reviewEdit" class="quiz-edit">Изменить ответы</button>
       </div>
     </div>
   </section>
@@ -528,7 +576,7 @@
           <div class="card-icon">▣</div>
           <h3>Собрать работу в одном месте</h3>
           <p>Веб-приложение для заявок, учёта или отчётности. Вместо поиска по таблицам и перепискам — понятный рабочий сценарий в браузере.</p>
-          <span class="tag">MVP: 3–5 недель</span>
+          <span class="tag">первая рабочая версия: 3–5 недель</span>
         </div>
         <div class="card reveal">
           <div class="glow"></div>
@@ -576,31 +624,39 @@
             <div class="preview-note">Нажмите на экран, чтобы рассмотреть его в полном размере.</div>
           </div>
         </div>
-        <div class="case-card reveal">
+        <div class="case-card reveal case-card--telegram">
           <div>
             <span class="case-status">✓ готово и работает</span>
-            <h3>Telegram-бот для студий красоты</h3>
+            <h3>«Запись онлайн» — Telegram-бот для студий красоты</h3>
             <p>Задача: небольшие студии и частные мастера теряют клиентов из-за ручной записи в блокноте — без системы напоминаний и без записи вне рабочего времени.</p>
             <p>Решение: Telegram-бот сам ведёт запись, показывает свободное время мастеров и присылает клиентам напоминания о визите — это снижает неявки. Внутри бота — мини-приложение с каталогом услуг и ценами, которое открывается прямо в Telegram, без перехода на сторонний сайт.</p>
           </div>
           <a href="#contact" class="btn btn-ghost" style="white-space:nowrap;">Обсудить похожий проект</a>
+          <figure class="telegram-preview">
+            <div class="preview-label">ЗАПИСЬ ОНЛАЙН / TELEGRAM</div>
+            <a class="telegram-screen" href="assets/online-booking/telegram-cropped-20261008.jpg" target="_blank" rel="noopener" aria-label="Открыть полный скриншот записи онлайн">
+              <img src="assets/online-booking/telegram-cropped-20261008.jpg" alt="Telegram-бот Запись онлайн: выбор услуг, стоимость и продолжительность визита" width="1080" height="2259" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Услуги, цены и длительность визита <span aria-hidden="true">↗</span></figcaption>
+          </figure>
         </div>
-        <div class="case-card reveal">
+        <div class="case-card reveal case-card--telegram">
           <div>
             <span class="case-status">✓ готово и работает</span>
-            <h3>ИИ-помощник, который отвечает клиентам сам</h3>
-            <p>Задача: клиенты пишут в любое время суток, а ответить сразу не всегда получается — часть обращений теряется, пока бизнес занят.</p>
-            <p>Решение: Telegram-бот на нейросети отвечает на вопросы мгновенно и круглосуточно, без выходных. Модель можно на ходу переключать под задачу (GPT, Claude, Grok, Gemini), а внутри бота — своё мини-приложение, оформленное под фирменный стиль бизнеса.</p>
-            <p class="mono" style="font-size:13px;">Иллюстрация сценария — не переписка с клиентом.</p>
-            <div class="chat-demo" aria-hidden="true">
-              <div class="chat-bubble chat-bubble--user">Как бот помогает бизнесу?</div>
-              <div class="chat-bubble chat-bubble--bot">Отвечает на частые вопросы, пока вы заняты работой.</div>
-              <div class="chat-bubble chat-bubble--user">Можно настроить под мои услуги?</div>
-              <div class="chat-bubble chat-bubble--bot">Сценарии и оформление адаптируются под вашу задачу.</div>
-            </div>
+            <h3>«Мой ИИ помощник» — нейросети в Telegram</h3>
+            <p>Задача: собрать несколько нейросетей в одном привычном интерфейсе, чтобы задавать вопросы без переключения между сервисами.</p>
+            <p>ИИ-помощник в Telegram: помогает составлять и редактировать тексты, придумывать идеи, объяснять сложные темы и разбирать текст, который вы присылаете. Можно выбрать одну из четырёх нейросетей.</p>
+            <p>Выбор модели и начало разговора — прямо в чате. На экране справа показан интерфейс работающего бота.</p>
 
           </div>
           <a href="#contact" class="btn btn-ghost" style="white-space:nowrap;">Обсудить похожий проект</a>
+          <figure class="telegram-preview">
+            <div class="preview-label">МОЙ ИИ ПОМОЩНИК / TELEGRAM</div>
+            <a class="telegram-screen" href="assets/ai-assistant/telegram-cropped-20261008.jpg" target="_blank" rel="noopener" aria-label="Открыть полный скриншот ИИ-помощника">
+              <img src="assets/ai-assistant/telegram-cropped-20261008.jpg" alt="Мой ИИ помощник в Telegram: выбор GPT, Claude, Grok или Gemini и приветствие бота" width="1080" height="2245" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Выбор нейросети и начало разговора <span aria-hidden="true">↗</span></figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -650,7 +706,7 @@
       <div class="pricing reveal">
         <div class="price-card">
           <h3>Сайт / лендинг</h3>
-          <div class="price-value">от 30 000 ₽</div>
+          <div class="price-value">от 20 000 ₽</div>
           <div class="price-time">срок: 7–10 рабочих дней</div>
           <ul class="price-list">
             <li>Одна посадочная страница под вашу услугу</li>
@@ -660,31 +716,32 @@
           <a href="#contact" class="btn btn-ghost btn-block">Получить расчёт</a>
         </div>
         <div class="price-card featured">
-          <h3>Веб-приложение / MVP</h3>
-          <div class="price-value">от 100 000 ₽</div>
+          <h3>Веб-приложение для бизнеса</h3>
+          <div class="price-value">от 60 000 ₽</div>
           <div class="price-time">срок: 3–5 недель</div>
+          <p>Первая рабочая версия для записи клиентов, сбора заявок или учёта. Открывается в браузере на компьютере и телефоне — устанавливать ничего не нужно.</p>
           <ul class="price-list">
-            <li>Один основной рабочий сценарий в браузере</li>
-            <li>База данных и простая панель управления</li>
-            <li>Проверка сценария и запуск первой версии</li>
+            <li>Одна главная задача: например, запись клиентов</li>
+            <li>Сохранение данных и управление записями или заявками</li>
+            <li>Проверка работы и запуск — можно пользоваться сразу</li>
           </ul>
           <a href="#contact" class="btn btn-primary btn-block">Получить расчёт</a>
         </div>
         <div class="price-card">
-          <h3>Бот для записи / заявок</h3>
-          <div class="price-value">Индивидуально</div>
+          <h3>Бот для записи клиентов</h3>
+          <div class="price-value">от 15 000 ₽</div>
           <div class="price-time">срок после согласования сценария</div>
-          <p>Стоимость зависит от сценария записи, количества мастеров и интеграций. После обсуждения задачи подготовлю смету.</p>
+          <p>Настройка бота «Запись онлайн» под одного мастера или небольшую студию. Несколько мастеров, онлайн-оплата и дополнительные интеграции рассчитываются отдельно.</p>
           <ul class="price-list">
-            <li>Telegram-бот с кнопками, без ИИ</li>
-            <li>Сценарий записи или сбора заявок</li>
+            <li>Услуги и цены в Telegram</li>
+            <li>Выбор времени и запись клиента</li>
             <li>Подтверждения и уведомления</li>
           </ul>
           <a href="#contact" class="btn btn-ghost btn-block">Рассчитать бота</a>
         </div>
         <div class="price-card">
           <h3>ИИ-помощник для бизнеса</h3>
-          <div class="price-value">от 45 000 ₽</div>
+          <div class="price-value">от 30 000 ₽</div>
           <div class="price-time">срок: 10–15 рабочих дней</div>
           <ul class="price-list">
             <li>Telegram-бот для ответов на вопросы</li>
@@ -704,13 +761,13 @@
       <div class="launch-offer">
         <div>
           <div class="eyebrow">Предложение для первых клиентов</div>
-          <h2>Первые три сайта —<br>со скидкой 20%</h2>
+          <h2>Первые три сайта —<br>со скидкой 50%</h2>
           <p>Разработаю первые три сайта со скидкой: от обсуждения задачи и дизайна до готового сайта, который удобно открыть на телефоне.</p>
           <p class="offer-terms">Скидка действует на разработку сайта по согласованной смете. Домен, хостинг и платные сервисы оплачиваются отдельно.</p>
         </div>
         <div class="offer-action">
-          <span class="offer-original">Базовый лендинг: <s>от 30 000 ₽</s></span>
-          <div class="offer-price">от 24 000 ₽</div>
+          <span class="offer-original">Базовый лендинг: <s>20 000 ₽</s></span>
+          <div class="offer-price">10 000 ₽</div>
           <p>Дизайн, адаптация под телефон,<br>форма заявки и запуск.</p>
           <a href="#contact" class="btn btn-primary">Обсудить сайт со скидкой ↗</a>
           <span class="offer-caption">Уточните доступность предложения</span>
@@ -783,16 +840,16 @@
         <div class="faq-item">
           <button class="faq-q">Сколько стоит разработка?<span class="plus">+</span></button>
           <div class="faq-a">
-            <p><strong>Сайт / лендинг — от 30 000 ₽.</strong> Одна посадочная страница, дизайн, адаптация под телефон, форма заявки и запуск.</p>
-            <p><strong>Веб-приложение / MVP — от 100 000 ₽.</strong> Один основной рабочий сценарий, база данных, простая панель управления, проверка и запуск первой версии.</p>
-            <p><strong>Бот для записи или заявок — индивидуально.</strong> Telegram-бот с кнопками, запись или сбор заявок, подтверждения и уведомления. Цена зависит от сценария и интеграций.</p>
-            <p><strong>ИИ-помощник — от 45 000 ₽.</strong> Telegram-бот для ответов на вопросы, настройка по вашим материалам и проверка ответов.</p>
+            <p><strong>Сайт / лендинг — от 20 000 ₽.</strong> Одна посадочная страница, дизайн, адаптация под телефон, форма заявки и запуск.</p>
+            <p><strong>Веб-приложение для бизнеса — от 60 000 ₽.</strong> Первая рабочая версия для одной главной задачи: записи клиентов, сбора заявок или учёта. Данные сохраняются, а вы управляете ими через простой кабинет в браузере. Проверка работы и запуск входят в стоимость. Дополнительные возможности можно добавить позже.</p>
+            <p><strong>Бот для записи клиентов — от 15 000 ₽.</strong> Настройка бота «Запись онлайн» под одного мастера или небольшую студию: услуги и цены, выбор времени, подтверждения и уведомления. Несколько мастеров, онлайн-оплата и дополнительные интеграции рассчитываются отдельно. Состав функций фиксируем до начала работы.</p>
+            <p><strong>ИИ-помощник — от 30 000 ₽.</strong> Telegram-бот для ответов на вопросы, настройка по вашим материалам и проверка ответов.</p>
             <p>Это стартовые цены для базового объёма. Состав работ и итоговую стоимость фиксируем в смете до начала разработки.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Как получить скидку на один из первых трёх сайтов?<span class="plus">+</span></button>
-          <div class="faq-a"><p>Напишите, какой сайт вам нужен, и уточните доступность предложения. На первые три сайта действует скидка 20% от согласованной стоимости разработки: базовый лендинг — от 24 000 ₽ вместо 30 000 ₽. Условия фиксируем в смете до старта.</p></div>
+          <div class="faq-a"><p>Напишите, какой сайт вам нужен, и уточните доступность предложения. Первые три базовых лендинга — за 10 000 ₽ вместо 20 000 ₽, со скидкой 50%. Состав работ и условия фиксируем в смете до старта.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Какие расходы оплачиваются отдельно?<span class="plus">+</span></button>
@@ -808,7 +865,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Сколько времени занимает разработка?<span class="plus">+</span></button>
-          <div class="faq-a"><p>Лендинг — ориентировочно 7–10 рабочих дней, базовый ИИ-помощник — 10–15 рабочих дней, веб-приложение / MVP с одним основным сценарием — 3–5 недель. Для бота записи срок зависит от сценария и интеграций. Тестирование и запуск входят в эти сроки; начинаем после согласования задачи и получения материалов. Точный график зафиксируем в смете.</p></div>
+          <div class="faq-a"><p>Лендинг — ориентировочно 7–10 рабочих дней, базовый ИИ-помощник — 10–15 рабочих дней, первая рабочая версия веб-приложения для одной главной задачи — 3–5 недель. Для бота записи срок зависит от сценария и интеграций. Тестирование и запуск входят в эти сроки; начинаем после согласования задачи и получения материалов. Точный график зафиксируем в смете.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Работаете ли с небольшим бюджетом?<span class="plus">+</span></button>
@@ -846,15 +903,10 @@
   var root = document.documentElement;
   var themeBtn = document.getElementById('themeToggle');
   function applyTheme(t){ if(t){ root.setAttribute('data-theme', t);} else { root.removeAttribute('data-theme'); } }
-  try{
-    var saved = localStorage.getItem('theme');
-    if(saved === 'light' || saved === 'dark') applyTheme(saved);
-  }catch(e){}
   themeBtn.addEventListener('click', function(){
     var current = root.getAttribute('data-theme') || 'dark';
     var next = current === 'dark' ? 'light' : 'dark';
     applyTheme(next);
-    try{ localStorage.setItem('theme', next); }catch(e){}
   });
 
   /* scroll progress + header hide + scrollspy */
@@ -1066,5 +1118,53 @@
 })();
 </script>
 
+<script>
+(function(){
+  var form = document.getElementById('reviewForm');
+  var steps = Array.from(form.querySelectorAll('[data-quiz-step]'));
+  var current = 0;
+  var titles = ['Ваш бизнес', 'Ваша задача', 'Детали'];
+  var error = document.getElementById('quizError');
+  function showStep(focus){
+    steps.forEach(function(step, i){ step.hidden = i !== current; });
+    document.getElementById('quizProgress').textContent = 'Шаг ' + (current + 1) + ' из 3 · ' + titles[current];
+    document.getElementById('quizBack').hidden = current === 0;
+    document.getElementById('quizNext').textContent = current === 2 ? 'Подготовить запрос →' : 'Далее →';
+    error.textContent = '';
+    if(focus) steps[current].querySelector('input').focus();
+  }
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if(current < 2){
+      if(!steps[current].querySelector('input:checked')){
+        error.textContent = 'Выберите один вариант, чтобы продолжить.';
+        steps[current].querySelector('input').focus();
+        return;
+      }
+      current++; showStep(true); return;
+    }
+    var name = document.getElementById('reviewName');
+    var details = document.getElementById('reviewDetails');
+    if(!name.value.trim() || details.value.trim().length < 5){
+      error.textContent = 'Укажите имя и кратко расскажите о бизнесе.';
+      (!name.value.trim() ? name : details).focus(); return;
+    }
+    document.getElementById('reviewMessage').value = 'Здравствуйте, Марина! Хочу бесплатный разбор записи клиентов и 3 улучшения.\n\nИмя: ' + name.value.trim() + '\nСфера: ' + form.querySelector('[name="business"]:checked').value + '\nЦель: ' + form.querySelector('[name="goal"]:checked').value + '\nКак сейчас записываются клиенты: ' + details.value.trim() + '\nСайт или соцсети: ' + (document.getElementById('reviewLink').value.trim() || 'Пока нет');
+    form.hidden = true;
+    document.getElementById('reviewResult').hidden = false;
+    document.getElementById('review-result-title').focus();
+  });
+  document.getElementById('quizBack').addEventListener('click', function(){ current--; showStep(true); });
+  document.getElementById('reviewEdit').addEventListener('click', function(){
+    document.getElementById('reviewResult').hidden = true; form.hidden = false;
+    document.getElementById('reviewCopyStatus').textContent = ''; showStep(true);
+  });
+  document.getElementById('reviewCopy').addEventListener('click', async function(){
+    var message = document.getElementById('reviewMessage');
+    try { await navigator.clipboard.writeText(message.value); document.getElementById('reviewCopyStatus').textContent = 'Скопировано. Откройте Telegram, вставьте текст и отправьте.'; }
+    catch(e){ message.focus(); message.select(); document.getElementById('reviewCopyStatus').textContent = 'Скопируйте выделенный текст и отправьте в Telegram.'; }
+  });
+})();
+</script>
 </body>
 </html>
