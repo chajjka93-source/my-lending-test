@@ -2,3 +2,29 @@
 .sites-*.tar.gz
 mobile-fixed-*.png
 review-layout.png
+
+# Секреты и локальные переменные окружения
+.env
+.env.*
+!.env.example
+.envrc
+
+# Зависимости и локальные файлы инструментов
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.vercel/
+
+# Локальный архив переноса
+/archive/
+
+# Временные профили браузера для проверок
+.browser-check/
+.browser-check-edge/

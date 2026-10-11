@@ -1,4 +1,6 @@
 const fs=require('fs');
+const path=require('path');
+const {pathToFileURL}=require('url');
 (async()=>{
  const pages=await (await fetch('http://127.0.0.1:9333/json')).json();
  const ws=new WebSocket(pages.find(p=>p.type==='page').webSocketDebuggerUrl);
