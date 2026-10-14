@@ -469,8 +469,8 @@
     <div class="wrap review-layout">
       <div class="review-copy">
         <div class="eyebrow">Ваш первый шаг</div>
-        <h2 id="review-title">Какую рутину<br>передадим помощнику?</h2>
-        <p>Ответьте на три вопроса о бизнесе. Предложу сценарий ИИ-помощника, объясню, какие материалы нужны и где потребуется участие человека.</p>
+        <h2 id="review-title">Какую задачу<br>решим первой?</h2>
+        <p>Ответьте на три вопроса о бизнесе. Предложу подходящий формат — ИИ-помощник, бот записи, сайт или веб-приложение, — объясню, какие материалы нужны и где потребуется участие человека.</p>
         <p>После разбора можно обсудить реализацию: объём работ, стоимость и сроки. Решение остаётся за вами.</p>
         <div class="trust-line">Разбор бесплатный. Отвечаю лично.</div>
       </div>
@@ -486,7 +486,9 @@
         </fieldset>
         <fieldset data-quiz-step="1" hidden>
           <legend>Что хотите улучшить в первую очередь?</legend>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Принимать записи и заявки клиентов">Принимать записи и заявки клиентов</label>
           <label class="quiz-choice"><input type="radio" name="goal" value="Отвечать на частые вопросы клиентов">Отвечать на частые вопросы клиентов</label>
+          <label class="quiz-choice"><input type="radio" name="goal" value="Сделать сайт или страницу под услугу">Сделать сайт или страницу под услугу</label>
           <label class="quiz-choice"><input type="radio" name="goal" value="Помогать с текстами и сообщениями">Помогать с текстами и сообщениями</label>
           <label class="quiz-choice"><input type="radio" name="goal" value="Собирать и разбирать информацию">Собирать и разбирать информацию</label>
           <label class="quiz-choice"><input type="radio" name="goal" value="Понять, с чего начать">Понять, с чего начать</label>
@@ -509,7 +511,7 @@
         <div class="eyebrow">Последний шаг</div>
         <h3 id="review-result-title" tabindex="-1">Отправьте запрос на разбор задачи</h3>
         <p>Скопируйте сообщение и отправьте мне в Telegram. Я предложу подходящий сценарий автоматизации и следующий шаг. Запрос ещё не отправлен.</p>
-        <textarea id="reviewMessage" rows="9" readonly aria-label="Ваш запрос на разбор задачи для ИИ-помощника"></textarea>
+        <textarea id="reviewMessage" rows="9" readonly aria-label="Ваш запрос на разбор задачи"></textarea>
         <div class="quiz-actions"><button type="button" id="reviewCopy" class="btn btn-ghost">1. Скопировать запрос</button><a class="btn btn-primary" href="https://t.me/chajjka" target="_blank" rel="noopener">2. Отправить в Telegram ↗</a></div>
         <p id="reviewCopyStatus" class="quiz-note" role="status" aria-live="polite"></p>
         <button type="button" id="reviewEdit" class="quiz-edit">Изменить ответы</button>
@@ -1026,9 +1028,10 @@
     var box = form.querySelector('.field-err[data-for="'+input.id+'"]');
     if(box) box.textContent = msg || '';
   }
+  var emptyMessages = {'f-name':'Укажите, как к вам обращаться','f-email':'Укажите email, на который ответить','f-msg':'Опишите задачу в одном-двух предложениях'};
   function validateField(input){
     var v = input.value.trim();
-    if(!v){ setError(input, 'Заполните это поле'); return false; }
+    if(!v){ setError(input, emptyMessages[input.id] || 'Заполните это поле'); return false; }
     if(input.type === 'email' && !emailPattern.test(v)){ setError(input, 'Проверьте формат email — например, you@company.ru'); return false; }
     if(input.hasAttribute('minlength') && v.length < (input.getAttribute('minlength')|0)){ setError(input, 'Слишком коротко — проверьте, всё ли указано'); return false; }
     setError(input, ''); return true;
@@ -1106,7 +1109,7 @@
       error.textContent = 'Укажите имя и кратко расскажите о бизнесе.';
       (!name.value.trim() ? name : details).focus(); return;
     }
-    document.getElementById('reviewMessage').value = 'Здравствуйте, Марина! Хочу бесплатный разбор задачи для ИИ-помощника.\n\nИмя: ' + name.value.trim() + '\nСфера: ' + form.querySelector('[name="business"]:checked').value + '\nЦель: ' + form.querySelector('[name="goal"]:checked').value + '\nПовторяющаяся задача: ' + details.value.trim() + '\nСайт или соцсети: ' + (document.getElementById('reviewLink').value.trim() || 'Пока нет');
+    document.getElementById('reviewMessage').value = 'Здравствуйте, Марина! Хочу бесплатный разбор задачи.\n\nИмя: ' + name.value.trim() + '\nСфера: ' + form.querySelector('[name="business"]:checked').value + '\nЦель: ' + form.querySelector('[name="goal"]:checked').value + '\nПовторяющаяся задача: ' + details.value.trim() + '\nСайт или соцсети: ' + (document.getElementById('reviewLink').value.trim() || 'Пока нет');
     form.hidden = true;
     document.getElementById('reviewResult').hidden = false;
     document.getElementById('review-result-title').focus();
