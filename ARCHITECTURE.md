@@ -29,6 +29,7 @@ flowchart LR
 | Шрифты | `assets/fonts/fonts.css` и файлы woff2 (Golos Text, Source Sans 3; лицензия SIL OFL) |
 | Изображения | `assets/marina-chaika.png`, `assets/ai-assistant/`, `assets/online-booking/`, `assets/direct-reports/` |
 | Политика | `privacy.html`, отдельная страница со своими стилями |
+| Согласие | `consent.html`, отдельная страница со стилями политики; ссылки в подвале, под контактной формой и в политике. Чекбокса на сайте нет: сайт ничего не отправляет |
 | Оферта | `offer.html`, отдельная страница со стилями политики; ссылки в подвале и под контактной формой |
 | Размещение | `.openai/hosting.json` содержит только идентификатор проекта Sites |
 
